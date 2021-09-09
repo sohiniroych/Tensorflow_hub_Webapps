@@ -33,4 +33,4 @@ RUN python3 /opt/app1.py
 EXPOSE 8080
 
 #Command
-#CMD ["python3", "/opt/object_detection_app_p1/app.py", "serve"]
+CMD ["python3", "/opt/app1.py", "serve"]
