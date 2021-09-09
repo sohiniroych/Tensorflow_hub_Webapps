@@ -22,15 +22,15 @@ RUN cd /opt && \
 RUN cd $HOME && \
     git clone https://github.com/sohiniroych/Tensorflow_hub_Webapps.git && \
     cp -r Tensorflow_hub_Webapps/Mask_RSNN_webapp/* /opt/ && \
-    chmod u+x /opt/app_mask.py
+    chmod u+x /opt/app_mask1.py
     
   
     
-RUN python3 /opt/app_mask.py
+RUN python3 /opt/app_mask1.py
 
     
 # expose ports
 EXPOSE 8080
 
 #Command
-CMD ["python3", "/opt/app_mask.py", "serve"]
+CMD ["python3", "/opt/app_mask1.py", "serve"]
