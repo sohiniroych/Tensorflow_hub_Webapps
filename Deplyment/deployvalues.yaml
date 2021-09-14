@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: od-v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: od
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: od
+        version: v1
+        env: production
+    spec:
+      containers:
+        # Here is the image of the container
+        - name: od
+          image: gcr.io/instructor-partition/od-fasterrcnn
+          imagePullPolicy: Always
+          args:
+            - "-text=version:v1"
+            - -listen=:8080
+          ports:
+            - containerPort: 8080
