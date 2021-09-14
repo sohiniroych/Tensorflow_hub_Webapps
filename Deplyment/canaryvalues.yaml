@@ -19,10 +19,5 @@ spec:
         - name: od
           image: gcr.io/instructor-partition/od-maskrcnn
           imagePullPolicy: Always
-          args:
-            - "-text=version:v2"
-            - -listen=:8080
-          imagePullPolicy: Always
-          name: od-v1
           ports:
             - containerPort: 8080
